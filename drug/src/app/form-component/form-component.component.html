@@ -1,0 +1,17 @@
+<div *ngFor="let item of drugObject.fields">
+    <div *ngIf="item.type!=='dropdown'" class="input-field">
+        <input [id]="item.key" [placeholder]="item.label" [type]="item.type" [readonly]="item.isReadonly">
+        {{item.unit}}
+        <span *ngIf="item.isRequired" class="required">
+           *
+        </span>
+    </div>
+    <div *ngIf="item.type=='dropdown'">
+        <label for="{{item.key}}">{{item.label}}</label>
+
+        <select name="{{item.key}}" id="{{item.key}}">
+            <option value="{{ddItem.value}}" *ngFor="let ddItem of item.items">{{ddItem.text}} </option>
+
+        </select>
+    </div>
+</div>

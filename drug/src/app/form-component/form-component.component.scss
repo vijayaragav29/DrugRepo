@@ -1,0 +1,19 @@
+.bar{
+    display: flex;
+    width: 280px;
+    height:30px;
+    border-radius:20px;
+    
+}
+.input-field{
+   margin: 10px;
+   input{
+    height: 40px;
+    min-width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+   }
+   .required{
+       color: red;
+   }
+}
